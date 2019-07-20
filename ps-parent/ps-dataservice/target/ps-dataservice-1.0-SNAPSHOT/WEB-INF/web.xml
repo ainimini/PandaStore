@@ -3,6 +3,8 @@
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3.0.xsd"
          id="dataservice" version="3.0" >
+
+    <!--应用名-->
     <display-name>dataservice application</display-name>
     <!--spring 监听器加载 application.xml配置文件-->
     <context-param>
