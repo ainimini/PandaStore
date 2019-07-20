@@ -8,7 +8,7 @@
     <!--导入属性配置-->
     <properties resource="generator.properties"></properties>
     <!-- 配置mysql 驱动jar包路径.用了绝对路径 在你的maven工程里面找到你用数据库的版本 复制绝对路径-->
-     <classPathEntry location="${jdbc.driverLocation}" />
+    <classPathEntry location="${jdbc.driverLocation}" />
     <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
 
         <!--分隔符-->
@@ -84,7 +84,7 @@
         <!-- 数据表进行生成操作 schema:相当于库名; tableName:表名;
             domainObjectName:对应的实体类名
         -->
-        <table schema="pandastore" tableName="tab_user" domainObjectName="User"
+        <!--<table schema="pandastore" tableName="tab_user" domainObjectName="User"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
@@ -98,8 +98,34 @@
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
-        </table>
+        </table>-->
 
+
+        <table schema="pandastore" tableName="user" domainObjectName="User"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table schema="pandastore" tableName="category" domainObjectName="Category"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table schema="pandastore" tableName="order" domainObjectName="Order"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table schema="pandastore" tableName="product" domainObjectName="Product"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table schema="pandastore" tableName="order_item" domainObjectName="OrderItem"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
 
         <!--<table schema="easybuy" tableName="easybuy_product" domainObjectName="Product"
                enableCountByExample="false" enableUpdateByExample="false"
