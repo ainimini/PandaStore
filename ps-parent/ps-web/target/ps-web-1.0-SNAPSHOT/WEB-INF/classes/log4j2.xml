@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+    <appenders>
+        <!--输出控制台配置-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--控制台只输出level及以上级别的信息，其他的直接拒绝-->
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="ACCEPT"/>
+            <!--输出日志信息格式-->
+            <PatternLayout pattern="[ps]%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </Console>
+        <!--打印所有日志信息 大小超过size，size或自动存入-->
+        <RollingFile name="RollingFile" fileName="/opt/tomcat_datasevice/logs/dataservice.log"
+                     filePattern="/opt/tomcat_dataservice/logs/$${date:yyyy-MM}/dataservice-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="[ps]%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n"/>
+            <SizeBasedTriggeringPolicy size="300MB"/>
+        </RollingFile>
+    </appenders>
+    <!--定义logger，只有定义logger引入appender，sppender才会有效-->
+    <loggers>
+        <!--建立一个默认root的logger-->
+        <root level="info">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </loggers>
+</configuration>
