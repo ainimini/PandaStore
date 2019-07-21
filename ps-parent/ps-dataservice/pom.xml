@@ -186,10 +186,10 @@
             <artifactId>spring-expression</artifactId>
         </dependency>
         <!--spring-framework-bom包-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-framework-bom</artifactId>
-        </dependency>
+        </dependency>-->
         <!--spring-instrument包-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -254,4 +254,22 @@
             <artifactId>commons-logging</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <!--手动指定资源文件夹位置-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*.*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>

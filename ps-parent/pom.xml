@@ -47,6 +47,7 @@
         <commons-io-version>2.5</commons-io-version>
         <httpclient-version>4.5.2</httpclient-version>
         <fastjson-version>1.2.36</fastjson-version>
+        <!--<spring-framework-bom-version>4.3.12.RELEASE</spring-framework-bom-version>-->
     </properties>
     <dependencyManagement>
         <!--dataservice 需要的依赖-->
@@ -236,11 +237,11 @@
                 <version>${spring.version}</version>
             </dependency>
             <!--spring-framework-bom包-->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
                 <version>${spring.version}</version>
-            </dependency>
+            </dependency>-->
             <!--spring-instrument包-->
             <dependency>
                 <groupId>org.springframework</groupId>
