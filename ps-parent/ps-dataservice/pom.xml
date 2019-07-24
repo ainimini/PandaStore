@@ -97,9 +97,8 @@
         </dependency>
 
         <!--Zookeeper客户端依赖-->
-        <!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient -->
         <dependency>
-            <groupId>com.github.sgroschupf</groupId>
+            <groupId>com.101tec</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
 
@@ -252,6 +251,12 @@
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
+        </dependency>
+
+        <!-- Gson Java对象转换为JSON string，也可以将JSON string转换为对应的Java对象-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
         </dependency>
     </dependencies>
 

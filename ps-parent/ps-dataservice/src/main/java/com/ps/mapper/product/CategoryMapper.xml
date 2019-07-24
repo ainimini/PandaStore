@@ -87,4 +87,9 @@
     set cname = #{cname,jdbcType=VARCHAR}
     where cid = #{cid,jdbcType=VARCHAR}
   </update>
+
+  <!--查询产品种类-->
+  <select id="selectProductCategory" resultMap="BaseResultMap">
+    SELECT cname FROM category
+  </select>
 </mapper>

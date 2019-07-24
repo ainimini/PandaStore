@@ -14,9 +14,8 @@
 
     <dependencies>
         <!--Zookeeper客户端依赖-->
-        <!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient -->
         <dependency>
-            <groupId>com.github.sgroschupf</groupId>
+            <groupId>com.101tec</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
 
@@ -145,13 +144,6 @@
             <artifactId>taglibs-standard-impl</artifactId>
         </dependency>
 
-        <!--Zookeeper客户端依赖-->
-        <!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient -->
-        <dependency>
-            <groupId>com.github.sgroschupf</groupId>
-            <artifactId>zkclient</artifactId>
-        </dependency>
-
         <!--log4j2 日志依赖   log for java-->
         <!--低级别打印高级别 off>fatal>error>warn>info>debug>all-->
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
@@ -233,6 +225,23 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.pandastore</groupId>
+            <artifactId>ps-exterface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.pandastore</groupId>
+            <artifactId>ps-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
 
+        <!-- Gson Java对象转换为JSON string，也可以将JSON string转换为对应的Java对象-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
     </dependencies>
 </project>

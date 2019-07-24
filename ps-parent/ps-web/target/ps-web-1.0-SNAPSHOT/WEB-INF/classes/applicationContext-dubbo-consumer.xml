@@ -10,4 +10,10 @@
     <dubbo:application name="pandastore"/>
     <!--配置注册中心-->
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+    <!--产品种类业务-->
+    <!--check 启动时不检查注册中心是否有这个服务-->
+    <dubbo:reference id="productCategoryInfoService" interface="com.ps.service.product.ProductCategoryInfoService" version="1.0.0" check="false" />
+    <!--产品信息业务-->
+    <dubbo:reference id="productInfoService" interface="com.ps.service.product.ProductInfoService" version="1.0.0" check="false" />
+
 </beans>

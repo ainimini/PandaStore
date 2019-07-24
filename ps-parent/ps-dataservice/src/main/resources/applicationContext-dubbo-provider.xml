@@ -10,4 +10,8 @@
     <dubbo:application name="dataservice" />
     <!--配置zookeeper注册中心-->
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
+    <!--产品种类业务-->
+    <dubbo:service interface="com.ps.service.product.ProductCategoryInfoService" ref="productCategoryInfoServiceImpl" version="1.0.0" timeout="15000" />
+    <!--产品信息业务-->
+    <dubbo:service interface="com.ps.service.product.ProductInfoService" ref="productInfoServiceImpl" version="1.0.0" timeout="15000" />
 </beans>
